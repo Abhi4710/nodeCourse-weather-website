@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 //define path for Express config
 // using static files requires the whole directory path.
@@ -89,6 +89,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
